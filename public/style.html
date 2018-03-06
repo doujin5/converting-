@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="login.css" media="screen" charset="utf-8">
+	<body>
+		
+		<div class="loginbox">
+			<img src="./Bexar_1J3A6667_7c350b35-a2ef-4f18-9246-c1b7290f03f3.jpg" class="photographer">
+			<h1>login</h1>
+			<form method="post" action="/login">
+				<p>E-mail</p>
+				<input type="text" name="mail_id" placeholder="enter your mail adress" id="mail_id">
+				<p>password</p>
+				<input type="password" name="password" placeholder="enter password" id="password">
+				<input type="submit" name="" value="login" onclick="validate()" id="form">
+				<a href="#">lost your password?</a><br>
+				<a href="#">don't have an account?</a>
+			</form>
+		</div>
+		<script type="text/javascript">
+			function validate(){
+				var mail=document.getElementById("mail_id").value;
+			    var password=document.getElementById("password").value;
+			    var pattern=/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/ ;;
+			    var pass=/^\w+(\d)*$/;
+			    var regExemail=new RegExp(pattern);
+			    var regExpassword=new RegExp(pass);
+			    if(!mail.match(regExemail) )
+			    {
+			    alert("try again");
+			    }else
+			    alert("login succesfull");
+				}
+		</script>
+	</body>
+<title>login page</title>
+</head>
+</html>
